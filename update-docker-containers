@@ -1,0 +1,5 @@
+docker stop default-mongo default-redis default-postgres
+docker rm default-mongo default-redis default-postgres
+./smack-my-docker-up
+docker ps
+echo "-- Stuff should be up and running again! --"

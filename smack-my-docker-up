@@ -1,0 +1,4 @@
+docker container run -itd -p 5432:5432 --name default-postgres --restart unless-stopped -v default-postgres:/var/lib/postgresql/data -e POSTGRES_PASSWORD=password -e POSTGRES_USER=alex postgres:alpine
+docker container run -itd --name default-redis -p 6379:6379 --restart unless-stopped -v default-redis:/data redis:alpine
+docker pull mongo:latest
+docker run -it --name default-mongo -p 27017:27017 -v default-mongo:/data/db --restart unless-stopped -d mongo --auth
