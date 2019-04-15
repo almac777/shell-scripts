@@ -1,1 +1,1 @@
-xmodmap ./resources/xmodmap-flip-pause-and-insert &
+xmodmap ./resources/xmodmap-flip-pause.conf &
