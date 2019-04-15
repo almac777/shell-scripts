@@ -14,7 +14,11 @@ CREATE DATABASE databasename
 GRANT ALL PRIVILEGES ON DATABASE "<new-database>" TO <new-user>;
 ```
 
-# Docker Networks
+# Docker
+
+Some docker scripts
+
+## Docker Networks
 
 Create a docker network and give it a name
 
