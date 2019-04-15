@@ -18,6 +18,16 @@ GRANT ALL PRIVILEGES ON DATABASE "<new-database>" TO <new-user>;
 
 Some docker scripts
 
+## Docker Containers
+
+This is quite handy whenever you have to import a file, after you've already built a container.
+
+```
+(docker exec -i <CONTAINER> sh -c "cat > <OUTPUT-FILENAME-CONTAINER>") < <INPUT-FILENAME-HOSTSYSTEM>
+# optional: docker exec -it <CONTAINER> bash and wget the file.
+```
+
+
 ## Docker Networks
 
 Create a docker network and give it a name
