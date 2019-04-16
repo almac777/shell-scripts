@@ -102,6 +102,9 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 alias diskspace='echo "Diskspace - Greatly simplified (use df -h for all details)" && df -h | awk "/Filesystem/ || /sda1/"'
 alias update='sudo apt update && yes | sudo apt upgrade && sudo apt autoremove'
 
+alias flip-keys='~/git/sh/xmod-keys/flip-keys'
+alias normalize-keys='~/git/sh/xmod-keys/normalize-keys'
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -122,3 +125,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
+echo 'Dont forget: It is easier to ask for forgiveness, than to ask for permission.'
+echo 'Commands:'
+echo '..             | Back one directory'
+echo '...            | Back two directories'
+echo 'diskspace      | Prints the diskspace for all partitions'
+echo 'update         | Keep your distri up to date, punk.'
+echo 'flip-keys      | Flip Insert and Pause.'
+echo 'normalize-keys | Flip Pause and Insert.'
