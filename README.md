@@ -7,7 +7,7 @@ When working with docker.
 Since this is something I like to forget:
 
 ```
-psql -U <username> --password
+psql -U <username> [-d <database-name>] --password
 # Create user + password + db and grant all privileges
 CREATE USER <new-user> WITH PASSWORD '<new-password>';
 CREATE DATABASE databasename
@@ -16,7 +16,7 @@ GRANT ALL PRIVILEGES ON DATABASE "<new-database>" TO <new-user>;
 
 # Docker
 
-Some docker scripts
+Unfortunately I keep forgetting how exactly to do some details with docker. The scripts here are just diff HOWTOs I have and will accumulate over time. Trying to sort them by categories.
 
 ## Docker Containers
 
@@ -30,8 +30,9 @@ This is quite handy whenever you have to import a file, after you've already bui
 
 ## Docker Networks
 
-Create a docker network and give it a name
+Create a docker network and give it a name.
+Other containers can be plugged into this network, so they can find each other via IPs.
 
 ```
-docker network create --subnet 172.19.0.2/16 default-database
+docker network create --subnet <SUBNET, e.g.: 172.19.0.0/16> docker-subnet
 ```
