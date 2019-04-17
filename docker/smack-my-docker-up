@@ -2,3 +2,4 @@ docker container run -itd -p 5432:5432 --name default-postgres --restart unless-
 docker container run -itd --name default-redis -p 6379:6379 --restart unless-stopped -v default-redis:/data redis:alpine
 docker pull mongo:latest
 docker run -it --name default-mongo -p 27017:27017 -v default-mongo:/data/db --restart unless-stopped -d mongo --auth
+docker container run -itd --name default-swagger-ui -p 8090:8080 --restart unless-stopped swaggerapi/swagger-ui:latest
