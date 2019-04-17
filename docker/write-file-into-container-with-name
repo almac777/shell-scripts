@@ -1,0 +1,2 @@
+# $1 = container / $2 = input file / $3 = output file
+(docker exec -i $1 sh -c "cat > $3") < $2

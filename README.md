@@ -18,6 +18,8 @@ GRANT ALL PRIVILEGES ON DATABASE "<new-database>" TO <new-user>;
 
 Unfortunately I keep forgetting how exactly to do some details with docker. The scripts here are just diff HOWTOs I have and will accumulate over time. Trying to sort them by categories.
 
+One could also simply use portainer.io or something like that.
+
 ## Docker Containers
 
 This is quite handy whenever you have to import a file, after you've already built a container.

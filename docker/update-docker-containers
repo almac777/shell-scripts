@@ -1,5 +1,5 @@
-docker stop default-mongo default-redis default-postgres default-swagger-ui
-docker rm default-mongo default-redis default-postgres default-swagger-ui
+docker stop $(docker ps -a -q) 
+docker rm $(docker ps -a -q)
 ./smack-my-docker-up
 docker ps
 echo "-- Stuff should be up and running again! --"
