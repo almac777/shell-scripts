@@ -1,1 +1,1 @@
-xmodmap ./resources/xmodmap-flip-pause.conf &
+xmodmap ./configs/normalize.conf 
