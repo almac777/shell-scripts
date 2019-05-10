@@ -2,6 +2,10 @@
 
 When working with docker.
 
+# git
+
+Added some scripts to automate setting up some of my favorite git aliases etc.
+
 # PSQL
 
 Since this is something I like to forget:
@@ -25,12 +29,15 @@ One could also simply use portainer.io or something like that.
 https://docs.docker.com/install/linux/linux-postinstall/
 
 `sudo groupadd docker`
+
 `sudo usermod -aG docker $USER`
+
 `docker run hello-world`
 
 If an error occurs:
 
 `sudo chown "$USER":"$USER" /home/"$USER"/.docker -R`
+
 `sudo chmod g+rwx "$HOME/.docker" -R`
 
 ## Docker Containers
