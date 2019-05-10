@@ -100,13 +100,14 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # Useful stuff
 alias diskspace='echo "Diskspace - Greatly simplified (use df -h for all details)" && df -h | awk "/Filesystem/ || /sda1/"'
-alias update='sudo apt update && yes | sudo apt upgrade && yes | sudo apt autoremove'
+alias update='sudo apt update && yes | sudo apt upgrade && yes | sudo apt autoremove && echo "Updating snaps..." && snap refresh'
 
 alias flip-keys='cd ~/git/sh/xmod-keys/ && ./flip-keys'
 alias normalize-keys='cd ~/git/sh/xmod-keys/ && ./normalize-keys'
 
-alias use-java-8="export JAVA_HOME=~/jdks/jdk-1.8.0_201_linux-x64_bin/"
-alias use-java-11="export JAVA_HOME=~/jdks/jdk-11.0.2_linux-x64_bin/"
+alias use-java-8="export JAVA_HOME=/opt/jdk-8/"
+alias use-java-11="export JAVA_HOME=/opt/jdk-11/"
+alias use-java-12="export JAVA_HOME=/opt/jdk-12/"
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -129,7 +130,7 @@ if ! shopt -oq posix; then
 fi
 
 export DOCKER_REGISTRY="docker.artifactory.twinformatics.at/"
-export JAVA_HOME="/home/alex/jdks/jdk-11.0.2_linux-x64_bin/"
+export JAVA_HOME="/opt/jdk-11/"
 
 echo 'Dont forget: It is easier to ask for forgiveness, than to ask for permission.'
 echo '==='
@@ -144,6 +145,7 @@ echo 'diskspace      | Prints the diskspace for all partitions'
 echo 'update         | Keep your distri up to date, punk.'
 echo 'flip-keys      | Flip Insert and Pause.'
 echo 'normalize-keys | Flip Pause and Insert.'
-echo 'use-java-8     | use java 8  -> ~/jdks/jdk-1.8.0_201_linux-x64_bin/'
-echo 'use-java-11    | use java 11 -> ~/jdks/jdk-11.0.2_linux-x64_bin/'
+echo 'use-java-8     | use java 8  -> /opt/jdk-8'
+echo 'use-java-11    | use java 11 -> /opt/jdk-11'
+echo 'use-java-12    | use java 12 -> /opt/jdk-12'
 
