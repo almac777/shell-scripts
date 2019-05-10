@@ -100,10 +100,13 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # Useful stuff
 alias diskspace='echo "Diskspace - Greatly simplified (use df -h for all details)" && df -h | awk "/Filesystem/ || /sda1/"'
-alias update='sudo apt update && yes | sudo apt upgrade && sudo apt autoremove'
+alias update='sudo apt update && yes | sudo apt upgrade && yes | sudo apt autoremove'
 
-alias flip-keys='~/git/sh/xmod-keys/flip-keys'
-alias normalize-keys='~/git/sh/xmod-keys/normalize-keys'
+alias flip-keys='cd ~/git/sh/xmod-keys/ && ./flip-keys'
+alias normalize-keys='cd ~/git/sh/xmod-keys/ && ./normalize-keys'
+
+alias use-java-8="export JAVA_HOME=~/jdks/jdk-1.8.0_201_linux-x64_bin/"
+alias use-java-11="export JAVA_HOME=~/jdks/jdk-11.0.2_linux-x64_bin/"
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -125,7 +128,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export DOCKER_REGISTRY="docker.artifactory.twinformatics.at/"
+export JAVA_HOME="/home/alex/jdks/jdk-11.0.2_linux-x64_bin/"
+
 echo 'Dont forget: It is easier to ask for forgiveness, than to ask for permission.'
+echo '==='
+echo 'Env Variables:'
+echo "   DOCKER_REGISTRY => $DOCKER_REGISTRY"
+echo "   JAVA_HOME       => $JAVA_HOME"
+echo '==='
 echo 'Commands:'
 echo '..             | Back one directory'
 echo '...            | Back two directories'
@@ -133,3 +144,6 @@ echo 'diskspace      | Prints the diskspace for all partitions'
 echo 'update         | Keep your distri up to date, punk.'
 echo 'flip-keys      | Flip Insert and Pause.'
 echo 'normalize-keys | Flip Pause and Insert.'
+echo 'use-java-8     | use java 8  -> ~/jdks/jdk-1.8.0_201_linux-x64_bin/'
+echo 'use-java-11    | use java 11 -> ~/jdks/jdk-11.0.2_linux-x64_bin/'
+
