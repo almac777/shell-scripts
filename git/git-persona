@@ -1,0 +1,7 @@
+git config --global user.email "$1"
+git config --global user.name "$2"
+
+echo "Configured the git persona as:"
+git config --get user.email
+git config --get user.name
+

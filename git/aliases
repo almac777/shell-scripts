@@ -1,0 +1,22 @@
+echo "Source: https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases"
+echo "Adding: "
+echo "st   => status"
+echo "d    => diff"
+echo "ci   => commit"
+echo "yolo => just super fun"
+echo "aliases => list all aliases"
+echo "==="
+
+git config --global alias.d diff
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+
+git config --global alias.unstage 'reset HEAD --'
+
+git config --global alias.last 'log -1 HEAD'
+git config --global alias.last5 'log -5 HEAD'
+
+git config --global alias.aliases "config --get-regexp '^alias\.'"
+git config --global alias.yolo '!git commit -m "$(curl --silent --fail https://whatthecommit.com/index.txt)"'
+
