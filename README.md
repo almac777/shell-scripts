@@ -20,6 +20,19 @@ Unfortunately I keep forgetting how exactly to do some details with docker. The 
 
 One could also simply use portainer.io or something like that.
 
+## Docker After Install
+
+https://docs.docker.com/install/linux/linux-postinstall/
+
+`sudo groupadd docker`
+`sudo usermod -aG docker $USER`
+`docker run hello-world`
+
+If an error occurs:
+
+`sudo chown "$USER":"$USER" /home/"$USER"/.docker -R`
+`sudo chmod g+rwx "$HOME/.docker" -R`
+
 ## Docker Containers
 
 This is quite handy whenever you have to import a file, after you've already built a container.
@@ -38,3 +51,4 @@ Other containers can be plugged into this network, so they can find each other v
 ```
 docker network create --subnet <SUBNET, e.g.: 172.19.0.0/16> docker-subnet
 ```
+
