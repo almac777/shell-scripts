@@ -1,0 +1,8 @@
+sudo groupadd docker
+sudo usermod -aG docker $USER
+docker run hello-world
+echo 'Did you see Hello World? If so, gg'
+
+sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+sudo chmod g+rwx "$HOME/.docker" -R
+echo 'The preceeding error messages might be normal :)'
