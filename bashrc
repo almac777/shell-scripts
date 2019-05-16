@@ -131,6 +131,7 @@ fi
 
 export DOCKER_REGISTRY="docker.artifactory.twinformatics.at/"
 export JAVA_HOME="/opt/jdk-11/"
+export SPRING_PROFILES_ACTIVE=local
 
 echo 'Dont forget: It is easier to ask for forgiveness, than to ask for permission.'
 echo '==='
