@@ -109,6 +109,11 @@ alias use-java-8="export JAVA_HOME=/opt/jdk-8/"
 alias use-java-11="export JAVA_HOME=/opt/jdk-11/"
 alias use-java-12="export JAVA_HOME=/opt/jdk-12/"
 
+# Does this work?
+mkcdir () {
+   mkdir -p -- "$1" && cd -P -- "$1"
+}
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -131,6 +136,7 @@ fi
 
 export DOCKER_REGISTRY="docker.artifactory.twinformatics.at/"
 export JAVA_HOME="/opt/jdk-11/"
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 
 echo 'Dont forget: It is easier to ask for forgiveness, than to ask for permission.'
 echo '==='
@@ -148,4 +154,5 @@ echo 'normalize-keys | Flip Pause and Insert.'
 echo 'use-java-8     | use java 8  -> /opt/jdk-8'
 echo 'use-java-11    | use java 11 -> /opt/jdk-11'
 echo 'use-java-12    | use java 12 -> /opt/jdk-12'
+echo 'mkcdir	     | mkdir and change into it'
 
