@@ -2,6 +2,11 @@
 
 When working with docker.
 
+# shell
+
+https://medium.com/wearetheledger/oh-my-zsh-made-for-cli-lovers-installation-guide-3131ca5491fb
+* todo: migrate bashrc into zshrc
+
 # git
 
 Added some scripts to automate setting up some of my favorite git aliases etc.
