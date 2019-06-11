@@ -4,8 +4,9 @@ When working with docker.
 
 # shell
 
+Download and follow the instructions for zshell here:
+
 https://medium.com/wearetheledger/oh-my-zsh-made-for-cli-lovers-installation-guide-3131ca5491fb
-* todo: migrate bashrc into zshrc
 
 # git
 

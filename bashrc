@@ -113,6 +113,7 @@ alias use-java-12="export JAVA_HOME=/opt/jdk-12/"
 mkcdir () {
    mkdir -p -- "$1" && cd -P -- "$1"
 }
+alias javav='java --version'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
