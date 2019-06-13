@@ -1,0 +1,2 @@
+mv ~/.zshrc ~/.zshrc_old
+ln -s ~/git/sh/zshrc ~/.zshrc
